@@ -2,23 +2,19 @@ package org.project.object.weapons;
 
 import org.project.entity.Entity;
 
-// TODO: UPDATE IMPLEMENTATION
+import java.util.ArrayList;
+
 public abstract class Weapon {
     private int damage;
     private int manaCost;
-
-    /*
-    TODO: ADD OTHER REQUIRED AND BONUS ATTRIBUTES
-    */
 
     public Weapon(int damage, int manaCost) {
         this.damage = damage;
         this.manaCost = manaCost;
     }
 
-    @Override
-    public void use(Entity target) {
-        target.takeDamage(damage);
+    public Weapon() {
+
     }
 
     public int getDamage() {
@@ -29,7 +25,6 @@ public abstract class Weapon {
         return manaCost;
     }
 
-    /*
-    TODO: ADD OTHER REQUIRED AND BONUS METHODS
-    */
+
+    public abstract void uniqueAbility(ArrayList<Entity> targets);
 }
